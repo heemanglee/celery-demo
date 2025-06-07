@@ -22,8 +22,8 @@ class Settings(BaseSettings):
     redis_password: Optional[str] = None
     
     # Celery 설정
-    celery_broker_url: str = f"redis://{redis_host}:{redis_port}/{redis_db}"
-    celery_result_backend: str = f"redis://{redis_host}:{redis_port}/{redis_db}"
+    celery_broker_url: str = f"redis://{redis_host}:{redis_port}/0"
+    celery_result_backend: str = f"redis://{redis_host}:{redis_port}/1"
     
     # 이메일 설정 (예제용 - 실제 환경에서는 환경변수로 설정)
     smtp_server: str = "smtp.gmail.com"

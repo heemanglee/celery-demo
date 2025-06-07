@@ -17,6 +17,9 @@ celery_app.conf.update(
     # Celery 작업이 완료되어 Backend에 저장된 결과의 TTL (Time To Live) 설정
     result_expires=86400,
     
+    # 결과 조회 시 자동 삭제 방지
+    result_expires_on_consume=False,
+    
     # 시간대 설정
     timezone='Asia/Seoul',
     

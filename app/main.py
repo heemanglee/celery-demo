@@ -4,7 +4,7 @@ FastAPI 애플리케이션 메인 진입점
 
 from fastapi import FastAPI
 from app.core.config import settings
-from app.routers.celery_test import celery_test_router
+from app.routers.celery_test import celery_router
 
 def create_app() -> FastAPI:
     """FastAPI 애플리케이션 팩토리"""
@@ -36,4 +36,4 @@ def create_app() -> FastAPI:
 
 # 애플리케이션 인스턴스
 app = create_app()
-app.include_router(celery_test_router)
+app.include_router(celery_router)
